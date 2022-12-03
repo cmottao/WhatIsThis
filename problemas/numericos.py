@@ -43,9 +43,6 @@ def primos_relativos(a, b):
 '''
     9. Determinar si un número es múltiplo de la suma de otros dos números.
 '''
-
-def divisible(a, b):
-    return a % b == 0
     
 def multiplo(x1, x2, a):
     return divisible(a, x1+x2)
