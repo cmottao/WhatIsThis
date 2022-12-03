@@ -3,10 +3,10 @@
 '''
 
 def potencia(b, e):
-    if e == 0: #Caso base de la potenciación
+    if e == 0: 
         return 1
     else:
-        return b * potencia(b,e-1) #Potencia de n-1 por n
+        return b * potencia(b,e-1) 
 
 '''
     6. Una función que determine si un número es divisible por otro.
