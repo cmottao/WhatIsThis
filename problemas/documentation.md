@@ -47,17 +47,15 @@ Total egg production in a month $(\in\mathbb{N})$
 
 $$
 \begin{array}{cccc}
-egg\_production: & \mathbb{N} & \longrightarrow & \mathbb{N}\\
+egg\_ production: & \mathbb{N} & \longrightarrow & \mathbb{N}\\
 & (a) & \longmapsto & (gt×10)+(gc×6)
 \end{array}
 $$
 
 $$
-g = a / 3 \\
-
-gt = g / 2 \\
-
-gc = g / 2
+\begin{array}{c}
+g = a / 3 \\ gt = g / 2 \\ gc = g / 2
+\end{array}
 $$
 
 ### Problem 3
