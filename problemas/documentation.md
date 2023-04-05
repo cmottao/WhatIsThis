@@ -47,7 +47,7 @@ Total egg production in a month $(\in\mathbb{N})$
 
 $$
 \begin{array}{cccc}
-egg \mathbb{\_} production: & \mathbb{N} & \longrightarrow & \mathbb{N}\\
+egg{\_}production: & \mathbb{N} & \longrightarrow & \mathbb{N}\\
 & (a) & \longmapsto & (gt×10)+(gc×6)
 \end{array}
 $$
