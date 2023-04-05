@@ -26,7 +26,7 @@ Total production $(\in\mathbb{R})$
 
 $$
 \begin{array}{cccc}
-milk\_produced: & \mathbb{R\times R\times R\times R} & \longrightarrow & \mathbb{R}\\
+milk\textrm{\_}produced: & \mathbb{R\times R\times R\times R} & \longrightarrow & \mathbb{R}\\
 & (n,m,c,l) & \longmapsto & l×n×m/c
 \end{array}
 $$
@@ -47,14 +47,16 @@ Total egg production in a month $(\in\mathbb{N})$
 
 $$
 \begin{array}{cccc}
-egg\_ production: & \mathbb{N} & \longrightarrow & \mathbb{N}\\
+egg\textrm{\_}production: & \mathbb{N} & \longrightarrow & \mathbb{N}\\
 & (a) & \longmapsto & (gt×10)+(gc×6)
 \end{array}
 $$
 
 $$
 \begin{array}{c}
-g = a / 3 \\ gt = g / 2 \\ gc = g / 2
+g = a\\
+gt = g/2\\
+gc = g/2
 \end{array}
 $$
 
