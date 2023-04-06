@@ -19,9 +19,9 @@ Power $(\in\mathbb{N})$
 $$
 \begin{array}{cccc}
 power: & \mathbb{N\times N} & \longrightarrow & \mathbb{N}\\
-& (b,e) & \longmapsto & \begin{cases}
+& (b, e) & \longmapsto & \begin{cases}
 1 & \textrm{if } e=0\\
-b × power(b, e-1) & \textrm{in another case}
+b \cdot power(b, e-1) & \textrm{in another case}
 \end{cases}
 \end{array}
 $$
@@ -94,7 +94,7 @@ True or False $(\in\mathbb{B})$
 
 $$
 \begin{array}{cccc}
-relativeprimes: & \mathbb{N\times N} & \longrightarrow & \mathbb{B}\\
+relativePrimes: & \mathbb{N\times N} & \longrightarrow & \mathbb{B}\\
 & (a, b) & \longmapsto & \begin{cases}
 True & \textrm{if } mcd(a, b) = 1\\
 False & \textrm{in another case}
@@ -170,7 +170,7 @@ Linear coefficient of the derivate $(\in\mathbb{R})$
 
 $$
 \begin{array}{cccc}
-coefficientlinearderivate: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
+coefficientLinearDerivate: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
 & (a) & \longmapsto & 2a
 \end{array}
 $$
@@ -195,7 +195,7 @@ Value of the derivate at that point $(\in\mathbb{R})$
 
 $$
 \begin{array}{cccc}
-evaluatederivate: & \mathbb{R\times R\times R} & \longrightarrow & \mathbb{R}\\
+evaluateDerivate: & \mathbb{R\times R\times R} & \longrightarrow & \mathbb{R}\\
 & (a, b, x) & \longmapsto & 2ax + b
 \end{array}
 $$
@@ -216,18 +216,20 @@ True or False $(\in\mathbb{B})$
 
 $$
 \begin{array}{cccc}
-fibonacciaux: & \mathbb{N\times N \times N} & \longrightarrow & \mathbb{B}\\
+fibonacciAux: & \mathbb{N\times N \times N} & \longrightarrow & \mathbb{B}\\
 & (n, a, b) & \longmapsto & \begin{cases}
 True & \textrm{if } n = a\\
 False & \textrm{if } n < a\\
-fibonacciaux(n, b, a + b) & \textrm{in another case}
+fibonacciAux(n, b, a + b) & \textrm{in another case}
 \end{cases}
 \end{array}
 $$
 
+---
+
 $$
 \begin{array}{cccc}
 fibonacci: & \mathbb{N} & \longrightarrow & \mathbb{B}\\
-& (n) & \longmapsto & fibonacciaux(n,0,1)
+& (n) & \longmapsto & fibonacciAux(n,0,1)
 \end{array}
 $$

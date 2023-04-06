@@ -1,6 +1,6 @@
 # The farm
 
-A number of $V$ - Cows, $A$ - Birds (chickens and hens) and $E$ - Scorpions are bred on a farm. The cows are enclosed in a pen of $N × M$ square meters, the birds in a barn and the scorpions in showcases.
+A number of $V$ - Cows, $A$ - Birds (chickens and hens) and $E$ - Scorpions are bred on a farm. The cows are enclosed in a pen of $N \times M$ square meters, the birds in a barn and the scorpions in showcases.
 
 ## Problem 1
 
@@ -24,8 +24,8 @@ Total production $(\in\mathbb{R})$
 
 $$
 \begin{array}{cccc}
-milkproduction: & \mathbb{R\times R\times R\times R} & \longrightarrow & \mathbb{R}\\
-& (n, m, c, l) & \longmapsto & l × n × m / c
+milkProduction: & \mathbb{R\times R\times R\times R} & \longrightarrow & \mathbb{R}\\
+& (n, m, c, l) & \longmapsto & l \cdot n \cdot m / c
 \end{array}
 $$
 
@@ -45,8 +45,8 @@ Total egg production in a month $(\in\mathbb{N})$
 
 $$
 \begin{array}{cccc}
-eggproduction: & \mathbb{N} & \longrightarrow & \mathbb{N}\\
-& (a) & \longmapsto & (gt × 10) + (gc × 6)
+eggProduction: & \mathbb{N} & \longrightarrow & \mathbb{N}\\
+& (a) & \longmapsto & (gt \cdot 10) + (gc \cdot 6)
 \end{array}
 $$
 
@@ -87,9 +87,9 @@ $$
 
 $$
 \begin{array}{c}
-ks = 0.02 × s\\
-km = 0.03 × m\\
-kb = 0.05 × b\\
+ks = 0.02 \cdot s\\
+km = 0.03 \cdot m\\
+kb = 0.05 \cdot b\\
 kgtotal = ks + km + kb
 \end{array}
 $$
@@ -129,9 +129,9 @@ $$
 
 $$
 \begin{array}{c}
-per = 2 × (n + m)\\
-cw = 5 × w × per\\
-cb = 4 × b × per\\
-cr = 8 × r × per
+per = 2 \cdot (n + m)\\
+cw = 5 \cdot w \cdot per\\
+cb = 4 \cdot b \cdot per\\
+cr = 8 \cdot r \cdot per
 \end{array}
 $$

@@ -3,7 +3,7 @@
     produced on the farm?
 '''
 
-def milk_production(n, m, c, l):
+def milkProduction(n, m, c, l):
     return l * n * m / c
 
 '''
@@ -11,7 +11,7 @@ def milk_production(n, m, c, l):
     the other half 1 egg every 5 days, in a month how many eggs do they produce? (1 month ≡ 30 days).
 '''
 
-def egg_production(a):
+def eggProduction(a):
     g = a / 3 
     gt = g / 2 
     gc = g / 2 
@@ -31,11 +31,11 @@ def scorpions(s, m, b):
     return kgtotal / 3 
 
 '''
-    4. The farmer's corral was damaged and he doesn't know whether to re-enclose the corral with wood, wire 
-    or put a metal fence. If you are going to fence with wood you should put 4 rows of boards, with rod 8 rows 
-    and with wire only 5 rows, he wants to know what is the least expensive for fencing if you know that the 
-    barbed wire is worth P per meter, the boards at Q per meter and the rods S per meter. Given the size of the 
-    pen and the prices of the elements, what enclosure is the most economical?
+    4. The farmer's corral was damaged and he doesn't know whether to re-enclose the corral with wood, 
+    wire or put a metal fence. If you are going to fence with wood you should put 4 rows of boards, with 
+    rod 8 rows and with wire only 5 rows, he wants to know what is the least expensive for fencing if you 
+    know that the barbed wire is worth P per meter, the boards at Q per meter and the rods S per meter. 
+    Given the size of the pen and the prices of the elements, what enclosure is the most economical?
 '''
 
 def economical(n, m, w, b, r):

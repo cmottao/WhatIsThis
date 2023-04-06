@@ -1,5 +1,6 @@
 '''
-    14. Given the slope and the point of intersection of two lines, determine if they are parallel, perpendicular or none of the above.
+    14. Given the slope and the point of intersection of two lines, determine if they are parallel, 
+    perpendicular or none of the above.
 '''
 
 def lines(m1, m2, b1, b2):
@@ -11,10 +12,11 @@ def lines(m1, m2, b1, b2):
         return "Neither"
 
 '''
-    15. Given the slope and the point of intersection of two lines, determine the points of intersection at origin.
+    15. Given the slope and the point of intersection of two lines, determine the points of intersection 
+    at origin.
 '''
 
-def intersection_point(m1, m2, b1, b2):
+def intersectionPoint(m1, m2, b1, b2):
     x = (b2 - b1) / (m1 - m2)
     if m1 != m2:
         return (x, b1 + m1 * x)
@@ -22,77 +24,77 @@ def intersection_point(m1, m2, b1, b2):
         return None
 
 '''
-    16. Given the radius of a circle, calculate the area of the triangle that circumscribes the circle (triangle outside).
+    16. Given the radius of a circle, calculate the area of the triangle that circumscribes the circle 
+    (triangle outside).
 '''
 
-def area_triangle(r):
+def areaTriangle(r):
     b = r * 4
     h = r * 12**0.5
     return (b * h) / 2
 
 '''
-    17. Dado el radio de un círculo, calcular el área y perímetro del cuadrado, pentágono y hexágono
-    adentro (inscrito en un círculo) y afuera (inscribiendo al círculo).
+    17. Given the radius of a circle, calculate the area and perimeter of the square, pentagon, and 
+    hexagon inside (inscribed in a circle) and outside (inscribed in the circle).
 '''
 
-def per_cua_adentro(r):
+def squarePerimeterInside(r):
     l = r * (2**0.5)
     return l * 4
 
-def area_cua_adentro(r):
+def squareAreaInside(r):
     l = r * (2**0.5)
     return l ** 2
 
-def per_cua_afuera(r):
+def squarePerimeterOutside(r):
     l = r * 2
     return l * 4
 
-def area_cua_afuera(r):
+def squareAreaOutside(r):
     l = r * 2
     return l ** 2
 
-def per_pen_adentro(r):
+def pentagonPerimeterInside(r):
     k = r / 4
     l = k * 2 * (10-2*(5**0.5))**0.5 
     return l * 5
 
-def area_pen_adentro(r):
+def pentagonAreaInside(r):
     k = r / 4
     apo = k * ((5**0.5)+1)
-    return per_pen_adentro(r) * apo / 2
+    return (pentagonPerimeterInside(r) * apo) / 2
 
-def per_pen_afuera(r):
+def pentagonPerimeterOutside(r):
     k = r / ((5**0.5)+1)
     l = k * 2 * (10-2*(5**0.5))**0.5
     return l * 5
 
-def area_pen_afuera(r):
+def pentagonAreaOutside(r):
     apo = r
-    return per_pen_afuera(r) * apo / 2
+    return (pentagonPerimeterOutside(r) * apo) / 2
 
-def per_hex_adentro(r):
+def hexagonPerimeterInside(r):
     l = r
     return l * 6
 
-def area_hex_adentro(r):
+def hexagonAreaInside(r):
     k = r / 2
     apo = k * (3**0.5)
-    return per_hex_adentro(r) * apo / 2
+    return (hexagonPerimeterInside(r) * apo) / 2
 
-def per_hex_afuera(r):
+def hexagonPerimeterOutside(r):
     k = r / (3**0.5)
     l = k * 2
     return l * 6
 
-def area_hex_afuera(r):
+def hexagonAreaOutside(r):
     apo = r
-    return per_hex_afuera(r) * apo / 2
+    return (hexagonPerimeterOutside(r) * apo) / 2
 
 '''     
-    18. Si una araña utiliza un patrón de hexágono regular para su telaraña, y cada hexágono está
-    separado del otro por 1cm, y la araña quiere hacer una telaraña de pir2, ¿Qué cantidad de
-    telaraña requiere la araña?
+    18. If a spider uses a regular hexagon pattern for its cobweb, and each hexagon is separated from 
+    the other by 1cm, and the spider wants to make a web of πr2, how much cobweb does the spider require?
 '''
 
-def telaraña(r):
-    return 6*r + 3*r*(r+1)
+def cobweb(r):
+    return 6*r + (3*r*(r + 1))

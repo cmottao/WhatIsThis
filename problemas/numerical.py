@@ -31,7 +31,7 @@ def prime(n):
     8. Given two natural, determine if they are relative primes.
 '''
 
-def relative_primes(a, b):
+def relativePrimes(a, b):
     return mcd(a, b) == 1
 
 '''
@@ -52,7 +52,7 @@ def evaluate(a, b, c, x):
     11. Given the coefficients of a polynomial of degree two, calculate the linear coefficient of the derivative.
 '''
 
-def coefficient_linear_derivate(a):
+def coefficientLinearDerivate(a):
     return 2 * a
 
 '''
@@ -60,20 +60,20 @@ def coefficient_linear_derivate(a):
     polynomial in that number.
 '''
 
-def evaluate_derivate(a, b, x):
+def evaluateDerivate(a, b, x):
     return 2*a*x + b
 
 '''
     13. Given a natural, determine if it is a Fibonacci number or not.
 '''
 
-def fibonacci_aux(n, a, b):
+def fibonacciAux(n, a, b):
     if n == a:
         return True
     elif n < a:
         return False
     else:
-        return fibonacci_aux(n, b, a + b)
+        return fibonacciAux(n, b, a + b)
     
 def fibonacci(n):
-    return fibonacci_aux(n, 0, 1)
+    return fibonacciAux(n, 0, 1)

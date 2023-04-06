@@ -25,7 +25,7 @@ $$
 lines: & \mathbb{R\times R\times R\times R} & \longrightarrow & \mathbb{ASCII^{*}}\\
 & (m1, m2, b1, b2) & \longmapsto & \begin{cases}
 "Parallel" & \textrm{if } m1 = m2 \wedge b1 \neq b2\\
-"Perpendicular" & \textrm{if } m1 × m2 = -1\\
+"Perpendicular" & \textrm{if } m1 \cdot m2 = -1\\
 "Neither" & \textrm{in another case}
 \end{cases}
 \end{array}
@@ -53,9 +53,9 @@ Intersection point $((x, y) \in\mathbb{R\times R})$
 
 $$
 \begin{array}{cccc}
-intersectionpoint: & \mathbb{R\times R\times R\times R} & \longrightarrow & \mathbb{R\times R}\\
+intersectionPoint: & \mathbb{R\times R\times R\times R} & \longrightarrow & \mathbb{R\times R}\\
  & (m1, m2, b1, b2) & \longmapsto & \begin{cases}
-(x, b1 + m1 × x) & \textrm{if } m1 \neq m2\\
+(x, b1 + m1 \cdot x) & \textrm{if } m1 \neq m2\\
 \nexists & \textrm{in another case}
 \end{cases}
 \end{array}
@@ -83,15 +83,15 @@ Area of ​​the triangle that circumscribes the circle $( \in\mathbb{R})$
 
 $$
 \begin{array}{cccc}
-areatriangle: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
- & (r) & \longmapsto & (b × h) / 2
+areaTriangle: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
+ & (r) & \longmapsto & (b \cdot h) / 2
 \end{array}
 $$
 
 $$
 \begin{array}{c}
-b = 4 × r\\
-h = r × \sqrt{12}
+b = 4 \cdot r\\
+h = r \cdot \sqrt{12}
 \end{array}
 $$
 
@@ -133,102 +133,116 @@ Area of ​​the hexagon inscribing the circle $(\in\mathbb{R})$
 
 $$
 \begin{array}{cccc}
-squareperimeterinside: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
-& (r) & \longmapsto & l × 4
+squarePerimeterInside: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
+& (r) & \longmapsto & l \cdot 4
 \end{array}
 $$
 
 $$
 \begin{array}{c}
-l = r × \sqrt{2}
+l = r \cdot \sqrt{2}
 \end{array}
 $$
 
+---
+
 $$
 \begin{array}{cccc}
-square\_area\_inside: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
+squareaAreaInside: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
  & (r) & \longmapsto & l^{2}
 \end{array}
 $$
 
 $$
 \begin{array}{c}
-l = r × \sqrt{2}
+l = r \cdot \sqrt{2}
 \end{array}
 $$
 
+---
+
 $$
 \begin{array}{cccc}
-squareperimeteroutside: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
-& (r) & \longmapsto & l × 4
+squarePerimeterOutside: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
+& (r) & \longmapsto & l \cdot 4
 \end{array}
 $$
 
 $$
 \begin{array}{c}
-l = r × 2
+l = r \cdot 2
 \end{array}
 $$
 
+---
+
 $$
 \begin{array}{cccc}
-squareareaoutside: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
+squareAreaOutside: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
  & (r) & \longmapsto & l^{2}
 \end{array}
 $$
 
 $$
 \begin{array}{c}
-l = r × 2
+l = r \cdot 2
 \end{array}
 $$
 
+---
+
 $$
 \begin{array}{cccc}
-pentagonperimeterinside: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
- & (r) & \longmapsto & l × 5
+pentagonPerimeterInside: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
+ & (r) & \longmapsto & l \cdot 5
 \end{array}
 $$
 
 $$
 \begin{array}{c}
 k = r / 4\\
-l = 2 × k × (\sqrt{10 - 2 × \sqrt{5}})
+l = 2 \cdot k \cdot (\sqrt{10 - 2 \cdot \sqrt{5}})
 \end{array}
 $$
 
+---
+
 $$
 \begin{array}{cccc}
-pentagonareainside: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
-& (r) & \longmapsto & (apo + pentagonperimeterinside(r)) / 2
+pentagonAreaInside: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
+& (r) & \longmapsto & (pentagonPerimeterInside(r) \cdot apo) / 2
 \end{array}
 $$
 
 $$
 \begin{array}{c}
 k = r / 4\\
-apo = k × (\sqrt{5} + 1)
+apo = k \cdot (\sqrt{5} + 1)
 \end{array}
 $$
 
+---
+
 $$
 \begin{array}{cccc}
-pentagonperimeteroutside: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
- & (r) & \longmapsto & l × 5
+pentagonPerimeterOutside: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
+ & (r) & \longmapsto & l \cdot 5
 \end{array}
 $$
 
 $$
 \begin{array}{c}
 k = r / (\sqrt{5} + 1)\\
-l = 2 × k × (\sqrt{10 - 2 × \sqrt{5}})
+l = 2 \cdot k \cdot (\sqrt{10 - 2 \cdot \sqrt{5}})
 \end{array}
 $$
 
+---
+
 $$
 \begin{array}{cccc}
-pentagonareaoutside: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
- & (r) & \longmapsto & (apo + pentagonperimeteroutside(r)) / 2
+pentagonAreaOutside: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
+ & (r) & \longmapsto & (pentagonPerimeterOutside(r) \cdot apo) / 2
 \end{array}
 $$
 
@@ -238,10 +252,12 @@ apo = r
 \end{array}
 $$
 
+---
+
 $$
 \begin{array}{cccc}
-hexagonperimeterinside: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
- & (r) & \longmapsto & l × 6
+hexagonPerimeterInside: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
+ & (r) & \longmapsto & l \cdot 6
 \end{array}
 $$
 
@@ -251,43 +267,78 @@ apo = r
 \end{array}
 $$
 
+---
+
 $$
 \begin{array}{cccc}
-hexagonareainside: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
-& (r) & \longmapsto & (apo + hexagonperimeterinside(r)) / 2
+hexagonAreaInside: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
+& (r) & \longmapsto & (hexagonPerimeterInside(r) \cdot apo) / 2
 \end{array}
 $$
 
 $$
 \begin{array}{c}
 k = r / 2\\
-apo = k × \sqrt{3}
+apo = k \cdot \sqrt{3}
 \end{array}
 $$
 
+---
+
 $$
 \begin{array}{cccc}
-hexagonperimeteroutside: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
-& (r) & \longmapsto & l × 6
+hexagonPerimeterOutside: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
+& (r) & \longmapsto & l \cdot 6
 \end{array}
 $$
 
 $$
 \begin{array}{c}
 k = r / \sqrt{3}\\
-l = k × 2
+l = k \cdot 2
 \end{array}
 $$
 
+---
+
 $$
 \begin{array}{cccc}
-hexagonareaoutside: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
-& (r) & \longmapsto & (apo + hexagonperimeteroutside(r)) / 2
+hexagonAreaOutside: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
+& (r) & \longmapsto & (hexagonPerimeterOutside(r) \cdot apo) / 2
 \end{array}
 $$
 
 $$
 \begin{array}{c}
 apo = r
+\end{array}
+$$
+
+## Problem 18
+
+If a spider uses a regular hexagon pattern for its cobweb, and each hexagon is separated from the other by 1cm, and the spider wants to make a web of $πr2$, how much cobweb does the spider require?
+
+**Input:**
+
+Cobweb "radius" $(r \in\mathbb{R})$
+
+**Output:**
+
+Amount of cobweb needed $(cw \in\mathbb{R})$
+
+Función:
+
+$$
+\begin{array}{cccc}
+cobweb: & \mathbb{R} & \longrightarrow & \mathbb{R}\\
+& (r) & \longmapsto & 6r+3a(a+1)
+\end{array}
+$$
+
+$$
+\begin{array}{c}
+cw = 6r + \sum_{a=0}^{r} 6 \cdot a\\
+= 6r + 6 a(a + 1) / 2\\
+= 6r + 3a(a + 1)
 \end{array}
 $$
