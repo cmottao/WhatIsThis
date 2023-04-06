@@ -128,8 +128,10 @@ economical: & \mathbb{R\times R\times R\times R\times R} & \longrightarrow & \ma
 $$
 
 $$
+\begin{array}{c}
 per = 2 × (n + m)\\
 cw = 5 × w × per\\
 cb = 4 × b × per\\
 cr = 8 × r × per
+\end{array}
 $$

@@ -156,6 +156,8 @@ $$
 
 ## Problem 11
 
+Given the coefficients of a polynomial of degree two, calculate the linear coefficient of the derivative.
+
 **Input:**
 
 Cuadratic coefficient $(a \in\mathbb{R})$
