@@ -25,7 +25,7 @@ Total production $(\in\mathbb{R})$
 $$
 \begin{array}{cccc}
 milkproduction: & \mathbb{R\times R\times R\times R} & \longrightarrow & \mathbb{R}\\
-& (n,m,c,l) & \longmapsto & l×n×m/c
+& (n, m, c, l) & \longmapsto & l × n × m / c
 \end{array}
 $$
 
@@ -46,7 +46,7 @@ Total egg production in a month $(\in\mathbb{N})$
 $$
 \begin{array}{cccc}
 eggproduction: & \mathbb{N} & \longrightarrow & \mathbb{N}\\
-& (a) & \longmapsto & (gt×10)+(gc×6)
+& (a) & \longmapsto & (gt × 10) + (gc × 6)
 \end{array}
 $$
 
@@ -81,7 +81,7 @@ Kilos that can be sold $(\in\mathbb{R})$
 $$
 \begin{array}{cccc}
 scorpions: & \mathbb{N\times N\times N} & \longrightarrow & \mathbb{N}\\
-& (s,m,b) & \longmapsto & kgtotal/3
+& (s, m, b) & \longmapsto & kgtotal / 3
 \end{array}
 $$
 
@@ -119,10 +119,10 @@ Rod cost $(r \in\mathbb{R})$
 $$
 \begin{array}{cccc}
 economical: & \mathbb{R\times R\times R\times R\times R} & \longrightarrow & \mathbb{ASCII}^{*}\\
- & (n,m,w,b,r) & \longmapsto & \begin{cases}
-"Wire" & \textrm{if } \mathbb{cw < cb \land cw < cr}\\
-"Board" & \textrm{if } \mathbb{cb < cw \land cb < cr}\\
-"Rod" & \textrm{in another case}
+& (n, m, w, b, r) & \longmapsto & \begin{cases}
+\textrm{"Wire"} & \textrm{if } \mathbb{cw < cb \land cw < cr}\\
+\textrm{"Board"} & \textrm{if } \mathbb{cb < cw \land cb < cr}\\
+\textrm{"Rod"} & \textrm{in another case}
 \end{cases}
 \end{array}
 $$
