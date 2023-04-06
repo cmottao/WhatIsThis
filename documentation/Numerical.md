@@ -46,7 +46,7 @@ $$
 \begin{array}{cccc}
 divisible: & \mathbb{N\times N} & \longrightarrow & \mathbb{B}\\
 & (a,b) & \longmapsto & \begin{cases}
-True & \textrm{si } mod(a, b) = 0\\
+True & \textrm{if } mod(a, b) = 0\\
 False & \textrm{in another case}
 \end{cases}
 \end{array}
@@ -70,7 +70,7 @@ $$
 \begin{array}{cccc}
 prime: & \mathbb{N} & \longrightarrow & \mathbb{B}\\
 & (n) & \longmapsto & \begin{cases}
-True & \textrm{si } \forall_{i=2}^{\sqrt{n}} mod(n,i) \neq 0\\
+True & \textrm{if } \forall_{i=2}^{\sqrt{n}} mod(n,i) \neq 0\\
 False & \textrm{in another case}
 \end{cases}
 \end{array}
@@ -96,7 +96,7 @@ $$
 \begin{array}{cccc}
 relativeprimes: & \mathbb{N\times N} & \longrightarrow & \mathbb{B}\\
 & (a, b) & \longmapsto & \begin{cases}
-True & \textrm{si } mcd(a, b) = 1\\
+True & \textrm{if } mcd(a, b) = 1\\
 False & \textrm{in another case}
 \end{cases}
 \end{array}
@@ -218,8 +218,8 @@ $$
 \begin{array}{cccc}
 fibonacciaux: & \mathbb{N\times N \times N} & \longrightarrow & \mathbb{B}\\
 & (n, a, b) & \longmapsto & \begin{cases}
-True & \textrm{si } n = a\\
-False & \textrm{si } n < a\\
+True & \textrm{if } n = a\\
+False & \textrm{if } n < a\\
 fibonacciaux(n, b, a + b) & \textrm{in another case}
 \end{cases}
 \end{array}
