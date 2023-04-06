@@ -20,8 +20,8 @@ $$
 \begin{array}{cccc}
 power: & \mathbb{N\times N} & \longrightarrow & \mathbb{N}\\
 & (b,e) & \longmapsto & \begin{cases}
-1 & \textrm{if }e=0\\
-b×power(b,e-1) & \textrm{in another case}
+1 & \textrm{if } e=0\\
+b × power(b, e-1) & \textrm{in another case}
 \end{cases}
 \end{array}
 $$
@@ -46,7 +46,7 @@ $$
 \begin{array}{cccc}
 divisible: & \mathbb{N\times N} & \longrightarrow & \mathbb{B}\\
 & (a,b) & \longmapsto & \begin{cases}
-True & \textrm{si }mod(a, b) = 0\\
+True & \textrm{si } mod(a, b) = 0\\
 False & \textrm{in another case}
 \end{cases}
 \end{array}
@@ -70,7 +70,7 @@ $$
 \begin{array}{cccc}
 prime: & \mathbb{N} & \longrightarrow & \mathbb{B}\\
 & (n) & \longmapsto & \begin{cases}
-True & \textrm{si } \forall_{i=2}^{\sqrt{n}} mod(n,i)\neq0\\
+True & \textrm{si } \forall_{i=2}^{\sqrt{n}} mod(n,i) \neq 0\\
 False & \textrm{in another case}
 \end{cases}
 \end{array}
@@ -95,8 +95,8 @@ True or False $(\in\mathbb{B})$
 $$
 \begin{array}{cccc}
 relativeprimes: & \mathbb{N\times N} & \longrightarrow & \mathbb{B}\\
-& (a,b) & \longmapsto & \begin{cases}
-True & \textrm{si }mcd(a, b) = 1\\
+& (a, b) & \longmapsto & \begin{cases}
+True & \textrm{si } mcd(a, b) = 1\\
 False & \textrm{in another case}
 \end{cases}
 \end{array}
@@ -123,7 +123,7 @@ True or False $(\in\mathbb{B})$
 $$
 \begin{array}{cccc}
 multiple: & \mathbb{N\times N\times N} & \longrightarrow & \mathbb{B}\\
-& (a,x,y) & \longmapsto & divisible(a,x+y)
+& (a, x, y) & \longmapsto & divisible(a, x + y)
 \end{array}
 $$
 
@@ -150,7 +150,7 @@ Value of the polynomial at that point $(\in\mathbb{R})$
 $$
 \begin{array}{cccc}
 evaluate: & \mathbb{R\times R\times R\times R} & \longrightarrow & \mathbb{R}\\
-& (a,b,c,x) & \longmapsto & ax^{2}+bx+c
+& (a, b, c, x) & \longmapsto & ax^{2} + bx + c
 \end{array}
 $$
 
@@ -196,7 +196,7 @@ Value of the derivate at that point $(\in\mathbb{R})$
 $$
 \begin{array}{cccc}
 evaluatederivate: & \mathbb{R\times R\times R} & \longrightarrow & \mathbb{R}\\
-& (a,b,x) & \longmapsto & 2ax+b
+& (a, b, x) & \longmapsto & 2ax + b
 \end{array}
 $$
 
@@ -217,10 +217,10 @@ True or False $(\in\mathbb{B})$
 $$
 \begin{array}{cccc}
 fibonacciaux: & \mathbb{N\times N \times N} & \longrightarrow & \mathbb{B}\\
-& (n,a,b) & \longmapsto & \begin{cases}
-True & \textrm{si }n=a\\
-False & \textrm{si }n<a\\
-fibonacciaux(n,b,a+b) & \textrm{in another case}
+& (n, a, b) & \longmapsto & \begin{cases}
+True & \textrm{si } n = a\\
+False & \textrm{si } n < a\\
+fibonacciaux(n, b, a + b) & \textrm{in another case}
 \end{cases}
 \end{array}
 $$
