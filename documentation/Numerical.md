@@ -70,7 +70,7 @@ $$
 \begin{array}{cccc}
 prime: & \mathbb{N} & \longrightarrow & \mathbb{B}\\
 & (n) & \longmapsto & \begin{cases}
-True & \textrm{if } \forall_{i=2}^{\sqrt{n}} mod(n,i) \neq 0\\
+True & \textrm{if } \stackrel{\sqrt{n}}{\underset{i=2}{\forall}} mod(n,i) \neq 0\\
 False & \textrm{in another case}
 \end{cases}
 \end{array}

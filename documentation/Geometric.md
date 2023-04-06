@@ -24,9 +24,9 @@ $$
 \begin{array}{cccc}
 lines: & \mathbb{R\times R\times R\times R} & \longrightarrow & \mathbb{ASCII^{*}}\\
 & (m1, m2, b1, b2) & \longmapsto & \begin{cases}
-"Parallel" & \textrm{if } m1 = m2 \wedge b1 \neq b2\\
-"Perpendicular" & \textrm{if } m1 \cdot m2 = -1\\
-"Neither" & \textrm{in another case}
+\textrm{"Parallel"} & \textrm{if } m1 = m2 \wedge b1 \neq b2\\
+\textrm{"Perpendicular"} & \textrm{if } m1 \cdot m2 = -1\\
+\textrm{"Neither"} & \textrm{in another case}
 \end{cases}
 \end{array}
 $$

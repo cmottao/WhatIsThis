@@ -1,8 +1,8 @@
 from utils import ordenar, mcd, mcm
 
 '''
-    22. Implementar la criba de Eratostenes para calcular los números primos en el rango 1 a n, donde
-    n es un número natural dado por el usuario.
+    22. Implement the Eratosthenes sieve to calculate the prime numbers in the range 1 to n, where n is 
+    a natural number given by the user.
 '''
 
 def eratostenes(n):
@@ -16,8 +16,7 @@ def eratostenes(n):
     return primos
 
 '''
-    23. Desarrollar un algoritmo que calcule la suma de los elementos de un arreglo de números enteros
-    (reales).
+    23. Develop an algorithm that calculates the sum of the elements of an array of integers (real).
 '''
 
 def suma_arreglo(a):

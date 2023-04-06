@@ -42,3 +42,12 @@ sumArray: & \mathbb{R}^{n} & \longrightarrow & \mathbb{R}\\
 & (a) & \longmapsto & \underset{x\in a}{\sum} x
 \end{array}
 $$
+
+$$
+\begin{array}{cccc}
+sumArray: & \mathbb{R}^{n} & \longrightarrow & \mathbb{R}\\
+& (a) & \longmapsto & \stackrel{\text{above}}{\underset{\text{below}}{\sum}} x_i x
+\end{array}
+$$
+
+$ \stackrel{\text{above}}{\underset{\text{below}}{\sum}} x_i $

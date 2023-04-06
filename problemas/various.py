@@ -11,10 +11,10 @@ def treeTriming(p, k, t):
     will I pay him? in a week if the interest is simple? And how much if the interest is compound?
 '''
 
-def interes_simple(k, i):
+def simpleInterest(k, i):
     return k * (1 + (i / 100) * 7)
 
-def interes_compuesto(k, i):
+def compoundInterest(k, i):
     return k * (1 + (i / 100)) ** 7 
 
 '''

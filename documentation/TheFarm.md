@@ -120,8 +120,8 @@ $$
 \begin{array}{cccc}
 economical: & \mathbb{R\times R\times R\times R\times R} & \longrightarrow & \mathbb{ASCII}^{*}\\
 & (n, m, w, b, r) & \longmapsto & \begin{cases}
-\textrm{"Wire"} & \textrm{if } \mathbb{cw < cb \land cw < cr}\\
-\textrm{"Board"} & \textrm{if } \mathbb{cb < cw \land cb < cr}\\
+\textrm{"Wire"} & \textrm{if } cw < cb \land cw < cr\\
+\textrm{"Board"} & \textrm{if } cb < cw \land cb < cr\\
 \textrm{"Rod"} & \textrm{in another case}
 \end{cases}
 \end{array}
