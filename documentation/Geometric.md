@@ -337,7 +337,7 @@ $$
 
 $$
 \begin{array}{c}
-cw = 6r + \sum_{a=0}^{r} 6 \cdot a\\
+cw = 6r + \stackrel{r}{\underset{a=1}{\sum}} 6 \cdot a\\
 = 6r + 6 a(a + 1) / 2\\
 = 6r + 3a(a + 1)
 \end{array}

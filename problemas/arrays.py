@@ -1,4 +1,4 @@
-from utils import ordenar, mcd, mcm
+from utils import gcd, lcm
 
 '''
     22. Implement the Eratosthenes sieve to calculate the prime numbers in the range 1 to n, where n is 
@@ -11,7 +11,7 @@ def eratostenes(n):
     for i in range(2,n+1):
         if i not in no_primos: 
             primos.append(i)
-            for j in range(i * i,n+1,i): 
+            for j in range(i * i, n+1, i): 
                 no_primos.append(j)
     return primos
 
@@ -19,17 +19,17 @@ def eratostenes(n):
     23. Develop an algorithm that calculates the sum of the elements of an array of integers (real).
 '''
 
-def suma_arreglo(a):
+def sumArray(a):
     s = 0 
     for x in a: 
         s += x
     return s
 
 '''
-    24. Desarrollar un algoritmo que calcule el promedio de un arreglo de enteros (reales).
+    24. Develop an algorithm that calculates the average of the elements of an array of integers (real).
 '''
 
-def promedio_arreglo(a):
+def averageArray(a):
     n = len(a)
     s = 0 
     for x in a: 
@@ -37,102 +37,100 @@ def promedio_arreglo(a):
     return s / n
 
 '''
-    25. Desarrollar un algoritmo que calcule el producto punto de dos arreglos de enteros (reales) de
-    igual tamaño.
+    25. Develop an algorithm that calculates the dot product of two arrays of integers (real) of equal size.
 '''
 
-def producto_punto(v,w):
+def dotProduct(v, w):
     n = len(v)
-    p = 0 
+    s = 0 
     for i in range(n):
-        p += v[i]*w[i]
-    return p
+        s += v[i] * w[i]
+    return s
 
 '''
-    26. Desarrollar un algoritmo que calcule el mínimo de un arreglo de números enteros (reales).
+    26. Develop an algorithm that calculates the minimum of an array of (real) integers.
 '''
 
-def minimo_arreglo_aux(a,n):
+def minArrayAux(a, n):
     if n == 1:
         return a[0] 
     else:
-        return min(a[n-1],minimo_arreglo_aux(a,n-1)) 
+        return min(a[n - 1], minArrayAux(a, n - 1)) 
 
-def minimo_arreglo(a):
-    return minimo_arreglo_aux(a,len(a))
+def minArray(a):
+    return minArrayAux(a, len(a))
 
 '''
-    27. Desarrollar un algoritmo que calcule el máximo de un arreglo de números enteros (reales).
+    27. Develop an algorithm that calculates the maximum of an array of (real) integers.
 '''
 
-def maximo_arreglo_aux(a,n):
+def maxArrayAux(a, n):
     if n == 1:
         return a[0] 
     else:
-        return max(a[n-1],maximo_arreglo_aux(a,n-1)) 
+        return max(a[n - 1], maxArrayAux(a, n - 1)) 
 
-def maximo_arreglo(a):
-    return maximo_arreglo_aux(a,len(a))
+def maxArray(a):
+    return maxArrayAux(a, len(a))
 
 '''
-    28. Desarrollar un algoritmo que calcule el producto directo de dos arreglos de enteros (reales) de
-    igual tamaño.
+    28. Develop an algorithm that calculates the direct product of two arrays of (real) integers of same size. 
 '''
 
-def producto_directo(v,w):   
+def directProduct(v, w):   
     n = len(v)
-    x = []
+    u = []
     for i in range(n):
-        x.append(v[i] * w[i])
-    return x
+        u.append(v[i] * w[i])
+    return u
 
 '''
-    29. Desarrollar un algoritmo que determine la mediana de un arreglo de enteros (reales). La
-    mediana es el número que queda en la mitad del arreglo después de ser ordenado.
+    29. Develop an algorithm that determines the median of an array of (real) integers. The median is the 
+    number that remains in the middle of the array after being sorted.
 '''
 
-def mediana_arreglo(a):
-    ordenar(a) 
+def medianArray(a):
     n = len(a)
+    a = sorted(a) 
     if n % 2 != 0: 
-        return a[n//2]
+        return a[n // 2]
     else: 
-        return (a[n//2]+a[n//2-1]) / 2
+        return (a[n // 2] + a[n // 2 - 1]) / 2
 
 '''
-    30. Hacer un algoritmo que deje al final de un arreglo de números todos los ceros que aparezcan
-    en dicho arreglo.
+    30. Make an algorithm that leaves at the end of an array of numbers all the zeros that appeared in 
+    said arrangement.
 '''
    
-def contar(a): 
-    c = 0
+def countZeros(a): 
+    s = 0
     for i in a:
         if i == 0:
-            c += 1
-    return c
+            s += 1
+    return s
 
-def remover(a): 
+def removeZeros(a): 
     b = [] 
     for i in a:
         if i != 0:
             b.append(i)
     return b
 
-def agregar(b,c): 
+def addZeros(b, c): 
     for i in range(c):
         b.append(0)    
     return b
 
-def mover_ceros_arreglo(a):
-    return agregar(remover(a),contar(a))
+def moveZerosArray(a):
+    return addZeros(removeZeros(a), countZeros(a))
 
 ''' 
-    31. Suponga que un arreglo de enteros esta lleno de unos y ceros y que el arreglo representa un
-    número binario al revés. Hacer un algoritmo que calcule los números en decimal que representa
-    dicho arreglo de unos y ceros.
+    31. Suppose that an array of integers is full of 1's and 0's and that the array represents a
+    backwards binary number. Make an algorithm that calculates the numbers in decimal that represents
+    said arrangement of ones and zeros.
 '''
 
-def bad(a):
+def binaryToDecimal(a):
     n = len(a)
     s = 0 
     for i in range(n):
@@ -140,40 +138,40 @@ def bad(a):
     return s
 
 ''' 
-    32. Hacer un algoritmo que dado un número entero no negativo, cree un arreglo de unos y ceros
-    que representa el número en binario al revés.
+    32. Make an algorithm that, given a nonnegative integer, creates an array of ones and zeros
+    which represents the number in binary backwards.
 '''
 
-def dab(n):
+def decimalToBinary(n):
     if n < 2:
         return [n] 
     else:
-        return [n % 2] + dab(n // 2)
+        return [n % 2] + decimalToBinary(n // 2)
 
 '''
-    33. Hacer un algoritmo que calcule el Máximo Común Divisor (MCD) para un arreglo de enteros
-    positivos.
+    33. Make an algorithm that calculates the Greatest Common Divisor (GCD) for an array of integers
+    positives.
 '''
 
-def mcd_arreglo_aux(a,n):
+def gcdArrayAux(a, n):
     if n == 1:
         return a[0] 
     else:
-        return mcd(a[n-1],mcd_arreglo_aux(a,n-1))
+        return gcd(a[n - 1], gcdArrayAux(a, n - 1))
 
-def mcd_arreglo(a):
-    return mcd_arreglo_aux(a,len(a)) 
+def gcdArray(a):
+    return gcdArray(a, len(a)) 
 
 ''' 
-    34. Hacer un algoritmo que calcule el Mínimo Común Múltiplo (MCM) para un arreglo de enteros
-    positivos.
+    34. Make an algorithm that calculates the Least Common Multiple (LCM) for an array of integers
+    positives.
 '''
 
-def mcm_arreglo_aux(a,n):
+def lcmArrayAux(a, n):
     if n == 1:
         return a[0] 
     else: 
-        return mcm(a[n-1],mcm_arreglo_aux(a,n-1)) 
+        return lcm(a[n - 1], lcmArrayAux(a, n - 1)) 
 
-def mcm_arreglo(a):
-    return mcm_arreglo_aux(a,len(a))
+def lcmArray(a):
+    return lcmArrayAux(a, len(a))

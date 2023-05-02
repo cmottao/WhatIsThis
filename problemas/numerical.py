@@ -1,4 +1,4 @@
-from utils import mcd
+from utils import gcd
 
 '''
     5. Function power of an integer raised to an integer.
@@ -32,7 +32,7 @@ def prime(n):
 '''
 
 def relativePrimes(a, b):
-    return mcd(a, b) == 1
+    return gcd(a, b) == 1
 
 '''
     9. Determine if a number is a multiple of the sum of two others.

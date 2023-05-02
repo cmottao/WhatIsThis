@@ -96,7 +96,7 @@ $$
 \begin{array}{cccc}
 relativePrimes: & \mathbb{N\times N} & \longrightarrow & \mathbb{B}\\
 & (a, b) & \longmapsto & \begin{cases}
-True & \textrm{if } mcd(a, b) = 1\\
+True & \textrm{if } gcd(a, b) = 1\\
 False & \textrm{in another case}
 \end{cases}
 \end{array}

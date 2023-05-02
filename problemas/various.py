@@ -40,4 +40,4 @@ def threeLego(n):
     elif n == 3:
         return 4
     else:
-        return threeLego(n - 1) + threeLego(n-2) + threeLego(n-3)
+        return threeLego(n - 1) + threeLego(n - 2) + threeLego(n - 3)
