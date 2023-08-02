@@ -1,31 +1,31 @@
 # The farm
 
-A number of $V$ - Cows, $A$ - Birds (chickens and hens) and $E$ - Scorpions are bred on a farm. The cows are enclosed in a pen of $N \times M$ square meters, the birds in a barn and the scorpions in showcases.
+A number of $C$ - Cows, $B$ - Birds (chickens and hens) and $S$ - Scorpions are bred on a farm. The cows are enclosed in a pen of $N \times M$ square meters, the birds in a barn and the scorpions in showcases.
 
 ## Problem 1
 
-If a cow needs $M$ square meters of grass to produce $X$ liters of milk, how many liters of milk are produced on the farm?
+If a cow needs $G$ square meters of grass to produce $L$ liters of milk, how many liters of milk are produced on the farm?
 
 **Input:**
 
-Pen length $(n \in\mathbb{R})$
+$n:=$ Pen length $(\in \mathbb{R^{+}})$
 
-Pen width $(m \in\mathbb{R})$
+$m:=$ Pen width $(\in \mathbb{R^{+}})$
 
-Grass consumption $(c \in\mathbb{R})$
+$g:=$ Grass consumption $(\in \mathbb{R^{+}})$
 
-Liters of milk $(l \in\mathbb{R})$
+$l:=$ Liters of milk $(\in \mathbb{R^{+}})$
 
 **Output:**
 
-Total production $(\in\mathbb{R})$
+Total production $(\in \mathbb{R^{+}})$
 
 **Function:**
 
 $$
 \begin{array}{cccc}
-milkProduction: & \mathbb{R\times R\times R\times R} & \longrightarrow & \mathbb{R}\\
-& (n, m, c, l) & \longmapsto & l \cdot n \cdot m / c
+milkProduction: & \mathbb{R^{+} \times R^{+} \times R^{+} \times R^{+}} & \longrightarrow & \mathbb{R^{+}} \\
+& (n, m, g, l) & \longmapsto & (n \cdot m \cdot l) / g
 \end{array}
 $$
 
@@ -35,26 +35,18 @@ If 1/3 of the birds on the farm are chickens, and half of the chickens lay 1 egg
 
 **Input:**
 
-Birds $(a \in\mathbb{N})$
+$b:=$ Number of birds $(\in \mathbb{N})$
 
 **Output:**
 
-Total egg production in a month $(\in\mathbb{N})$
+Total egg production in a month $(\in \mathbb{N})$
 
 **Function:**
 
 $$
 \begin{array}{cccc}
-eggProduction: & \mathbb{N} & \longrightarrow & \mathbb{N}\\
-& (a) & \longmapsto & (gt \cdot 10) + (gc \cdot 6)
-\end{array}
-$$
-
-$$
-\begin{array}{c}
-g = a / 3\\
-gt = g / 2\\
-gc = g / 2
+eggProduction: & \mathbb{N} & \longrightarrow & \mathbb{N} \\
+& b & \longmapsto & \lfloor b \cdot (8 / 3) \rfloor
 \end{array}
 $$
 
@@ -64,74 +56,73 @@ If the scorpions from the farm are sold to China, and there are scorpions of thr
 
 **Input:**
 
-Small scorpions $(s \in\mathbb{N})$
+$s:=$ Number of small scorpions $(\in \mathbb{N})$
 
-Medium scorpions $(m \in\mathbb{R})$
+$m:=$ Number of medium scorpions $(\in \mathbb{N})$
 
-Big scorpions $(b \in\mathbb{R})$
-
-Liters of milk $(l \in\mathbb{R})$
+$b:=$ Number of big scorpions $(\in \mathbb{N})$
 
 **Output:**
 
-Kilos that can be sold $(\in\mathbb{R})$
+Kilos that can be sold $(\in \mathbb{R^{+}})$
 
 **Function:**
 
 $$
 \begin{array}{cccc}
-scorpions: & \mathbb{N\times N\times N} & \longrightarrow & \mathbb{N}\\
-& (s, m, b) & \longmapsto & kgtotal / 3
-\end{array}
-$$
-
-$$
-\begin{array}{c}
-ks = 0.02 \cdot s\\
-km = 0.03 \cdot m\\
-kb = 0.05 \cdot b\\
-kgtotal = ks + km + kb
+scorpions: & \mathbb{N \times N \times N} & \longrightarrow & \mathbb{R^{+}} \\
+& (s, m, b) & \longmapsto & ((s \cdot 0.02) + (m \cdot 0.03) + (b \cdot 0.05)) / 3
 \end{array}
 $$
 
 ## Problem 4
 
-The farmer's corral was damaged and he doesn't know whether to re-enclose the corral with wood, wire or put a metal fence. If you are going to fence with wood you should put 4 rows of boards, with rod 8 rows and with wire only 5 rows, he wants to know what is the least expensive for fencing if you know that the barbed wire is worth $P$ per meter, the boards at $Q$ per meter and the rods $S$ per meter. Given the size of the pen and the prices of the elements, what enclosure is the most economical?
+The farmer's corral was damaged and he doesn't know whether to re-enclose the corral with wood, wire or put a metal fence. If you are going to fence with wood you should put 4 rows of boards, with rod 8 rows and with wire only 5 rows, he wants to know what is the least expensive for fencing if you know that the barbed wire is worth $W$ per meter, the boards at $B$ per meter and the rods $R$ per meter. Given the size of the pen and the prices of the elements, what enclosure is the most economical?
 
 **Input:**
 
-Pen length $(n \in\mathbb{R})$
+$n:=$ Pen length $(\in \mathbb{R^{+}})$
 
-Pen width $(m \in\mathbb{R})$
+$m:=$ Pen width $(\in \mathbb{R^{+}})$
 
-Wire cost $(w \in\mathbb{R})$
+$w:=$ Wire cost $(\in \mathbb{R^{+}})$
 
-Board cost $(b \in\mathbb{R})$
+$b:=$ Board cost $(\in \mathbb{R^{+}})$
 
-Rod cost $(r \in\mathbb{R})$
+$r:=$ Rod cost $(\in \mathbb{R^{+}})$
 
 **Output:**
 
-“Wire” or “Board” or “Rod” $(\in\mathbb{ASCII}^{*})$
+Most economical enclosure: “Wire”, “Board” or “Rod” $(\in \mathbb{ASCII^{*}})$
+
+**Helpers variables:**
+
+$p:=$ Perimeter $(\in \mathbb{R^{+}})$
+
+$p = 2 \cdot (n + m)$
+
+$wc:=$ Wire enclosure cost $(\in \mathbb{R^{+}})$
+
+$wc = 5 \cdot w \cdot p$
+
+$bc:=$ Board enclosure cost $(\in \mathbb{R^{+}})$
+
+$bc = 5 \cdot b \cdot p$
+
+$rc:=$ Rod enclosure cost $(\in \mathbb{R^{+}})$
+
+$rc = 8 \cdot r \cdot p$
 
 **Function:**
 
 $$
 \begin{array}{cccc}
-economical: & \mathbb{R\times R\times R\times R\times R} & \longrightarrow & \mathbb{ASCII}^{*}\\
-& (n, m, w, b, r) & \longmapsto & \begin{cases}
-\textrm{"Wire"} & \textrm{if } cw < cb \land cw < cr\\
-\textrm{"Board"} & \textrm{if } cb < cw \land cb < cr\\
+economical: & \mathbb{R^{+} \times R^{+} \times R^{+} \times R^{+} \times R^{+}} & \longrightarrow & \mathbb{ASCII}^{*} \\
+& (n, m, w, b, r) & \longmapsto &
+\begin{cases}
+\textrm{"Wire"} & \textrm{if } (wc < bc) \land (wc < rc) \\
+\textrm{"Board"} & \textrm{if } (bc < wc) \land (bc < rc) \\
 \textrm{"Rod"} & \textrm{in another case}
 \end{cases}
-\end{array}
-$$
-
-$$
-\begin{array}{c}
-per = 2 \cdot (n + m)\\
-cw = 5 \cdot w \cdot per\\
-cb = 4 \cdot b \cdot per\\
-cr = 8 \cdot r \cdot per
 \end{array}
 $$
