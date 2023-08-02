@@ -1,4 +1,12 @@
-from utils import floor
+'''
+    Useful functions.
+'''
+
+def floor(x):
+    if (x < 0) and (x != int(x)):
+        return int(x) - 1
+    else:
+        return int(x)
 
 
 '''
@@ -9,6 +17,7 @@ from utils import floor
 def milkProduction(n, m, g, l):
     return (n * m * l) / g 
 
+
 '''
     2. If 1/3 of the birds on the farm are chickens, and half of the chickens lay 1 egg every 3 days and the 
     other half 1 egg every 5 days, in a month how many eggs do they produce? (1 month ≡ 30 days).
@@ -16,6 +25,7 @@ def milkProduction(n, m, g, l):
 
 def eggProduction(b):
     return floor(b * (8 / 3))
+
 
 '''
     3. If the scorpions from the farm are sold to China, and there are scorpions of three different sizes: small
@@ -25,6 +35,7 @@ def eggProduction(b):
 
 def scorpions(s, m, b):
     return ((s * 0.02) + (m * 0.03) + (b * 0.05)) / 3
+
 
 '''
     4. The farmer's corral was damaged and he doesn't know whether to re-enclose the corral with wood, wire or 

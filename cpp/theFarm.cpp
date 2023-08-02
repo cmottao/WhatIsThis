@@ -1,7 +1,6 @@
 #include <iostream> 
 using namespace std;
 
-
 /*
     1. If a cow needs M square meters of grass to produce X liters of milk, how many liters of milk are produced 
     on the farm?
@@ -10,6 +9,7 @@ using namespace std;
 float milkProduction(float n, float m, float g, float l) {
     return (n * m * l) / g;
 }
+
 
 /*
     2. If 1/3 of the birds on the farm are chickens, and half of the chickens lay 1 egg every 3 days and the 
@@ -20,6 +20,7 @@ int eggProduction(int b) {
     return b * (8.0 / 3.0);
 }
 
+
 /*
     3. If the scorpions from the farm are sold to China, and there are scorpions of three different sizes: small
     (with a weight of 20 grams), medium (with a weight of 30 grams) and large (with weighing 50 grams), how many 
@@ -29,6 +30,7 @@ int eggProduction(int b) {
 float scorpions(int s, int m, int b) {
     return (float) ((s * 0.02) + (m * 0.03) + (b * 0.05)) / 3;
 }
+
 
 /*
     4. The farmer's corral was damaged and he doesn't know whether to re-enclose the corral with wood, wire or 
