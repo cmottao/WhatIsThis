@@ -1,15 +1,4 @@
 '''
-    Useful functions.
-'''
-
-def floor(x):
-    if (x < 0) and (x != int(x)):
-        return int(x) - 1
-    else:
-        return int(x)
-
-
-'''
     1. If a cow needs M square meters of grass to produce X liters of milk, how many liters of milk are produced 
     on the farm?
 '''
@@ -24,7 +13,7 @@ def milkProduction(n, m, g, l):
 '''
 
 def eggProduction(b):
-    return floor(b * (8 / 3))
+    return int(b * (8 / 3))
 
 
 '''
