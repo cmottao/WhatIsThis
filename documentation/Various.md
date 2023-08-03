@@ -45,7 +45,6 @@ $$
 \begin{array}{cccc}
 simpleInterest: & \mathbb{R^{+} \times R^{+}} & \longrightarrow & \mathbb{R^{+}} \\
 & (k, i) & \longmapsto & (k + i) \cdot 7
-
 \end{array}
 $$
 
