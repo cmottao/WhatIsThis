@@ -63,7 +63,7 @@ $$
 intersectionPoint: & \mathbb{R \times R \times R \times R} & \longrightarrow & \mathbb{R \times R} \\
 & (m1, m2, b1, b2) & \longmapsto &
 \begin{cases}
-(x, (m1 \cdot x) + b1) & \textrm{if } m1 \neq m2 \\
+(x, m1 \cdot x + b1) & \textrm{if } m1 \neq m2 \\
 \nexists & \textrm{in another case}
 \end{cases}
 \end{array}

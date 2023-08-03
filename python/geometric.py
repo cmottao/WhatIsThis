@@ -39,7 +39,7 @@ def intersectionPoint(m1, m2, b1, b2):
 '''
 
 def triangleArea(r):
-    return 3 * sqrt(3) * (r ** 2)
+    return 3 * sqrt(3) * (r ** 2) 
 
 
 '''
