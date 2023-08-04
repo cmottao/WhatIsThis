@@ -10,7 +10,7 @@ $a:=$ Array to evaluate $(\in \mathbb{R}^n)$
 
 **Output:**
 
-Sum of array elements $(\in \mathbb{R})$
+Sum of array elements $(\in \mathbb{R})$ 
 
 **Function:**
 
