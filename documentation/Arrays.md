@@ -124,6 +124,8 @@ max(a_{n - 1}, maxArrayAux(a, n - 1)) & \textrm{in another case}
 \end{array}
 $$
 
+---
+
 $$
 \begin{array}{cccc}
 maxArray: & \mathbb{R}^n & \longrightarrow & \mathbb{R} \\
