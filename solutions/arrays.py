@@ -2,9 +2,6 @@
     Useful functions.
 '''
 
-def arr(n):
-    return [0] * n
-
 def gcd(a, b): 
     if b > a: 
         return gcd(b, a)
@@ -18,7 +15,19 @@ def lcm(a, b):
 
 
 '''
-    23. Develop an algorithm that calculates the sum of the elements of an array of real numbers.
+    22. Implement the Eratosthenes sieve to calculate the prime numbers in the range from 1 to n.
+'''
+
+def sieve(n):
+    p = [True] * (n)
+    for i in range(2, n + 1):
+        for j in range(i * i, n + 1, i):
+            p[j - 1] = False
+    return p
+
+
+'''
+    23. Calculate the sum of the elements of an array of real numbers.
 '''
 
 def sumArray(a):
@@ -29,7 +38,7 @@ def sumArray(a):
 
 
 '''
-    24. Develop an algorithm that calculates the average of the elements of an array of real numbers.
+    24. Calculate the average of the elements of an array of real numbers.
 '''
 
 def averageArray(a):
@@ -38,7 +47,7 @@ def averageArray(a):
 
 
 '''
-    25. Develop an algorithm that calculates the dot product of two arrays of real numbers of equal size.
+    25. Calculate the dot product of two arrays of real numbers of equal size.
 '''
 
 def dotProduct(v, w):
@@ -50,7 +59,7 @@ def dotProduct(v, w):
 
 
 '''
-    26. Develop an algorithm that calculates the minimum of an array of real numbers.
+    26. Calculate the minimum of an array of real numbers.
 '''
 
 def minArrayAux(a, n):
@@ -64,7 +73,7 @@ def minArray(a):
 
 
 '''
-    27. Develop an algorithm that calculates the maximum of an array of real numbers.
+    27. Calculate the maximum of an array of real numbers.
 '''
 
 def maxArrayAux(a, n):
@@ -78,20 +87,19 @@ def maxArray(a):
 
 
 '''
-    28. Develop an algorithm that calculates the direct product of two arrays of real numbers of same size. 
+    28. Calculate the direct product of two arrays of real numbers of same size. 
 '''
 
 def directProduct(v, w):   
     n = len(v)
-    u = arr(n)
+    u = [0] * n
     for i in range(n):
         u[i] = v[i] * w[i]
     return u
 
 
 '''
-    29. Develop an algorithm that determines the median of an array of real numbers. The median is the 
-    number that remains in the middle of the array after being sorted.
+    29. Determine the median of an array of real numbers.
 '''
 
 def medianArray(a):
@@ -104,7 +112,7 @@ def medianArray(a):
     
 
 '''
-    30. Make an algorithm that counts all the zeros that appeared in said array.
+    30. Determine how many zeros there are in an array.
 '''
    
 def countZeros(a): 
@@ -143,7 +151,7 @@ def decimalToBinary(n):
     
 
 '''
-    33. Make an algorithm that calculates the Greatest Common Divisor (GCD) for an array of integers positives.
+    33. Calculate the Greatest Common Divisor (GCD) for an array of integers positives.
 '''
 
 def gcdArrayAux(a, n):
@@ -157,7 +165,7 @@ def gcdArray(a):
 
 
 ''' 
-    34. Make an algorithm that calculates the Least Common Multiple (LCM) for an array of integers positives.
+    34. Calculate the Least Common Multiple (LCM) for an array of integers positives.
 '''
 
 def lcmArrayAux(a, n):

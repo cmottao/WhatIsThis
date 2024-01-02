@@ -1,5 +1,5 @@
 '''
-    1. If a cow needs M square meters of grass to produce X liters of milk, how many liters of milk are produced 
+    1. If a cow needs G square meters of grass to produce L liters of milk, how many liters of milk are produced 
     on the farm?
 '''
 
@@ -30,7 +30,7 @@ def scorpions(s, m, b):
     4. The farmer's corral was damaged and he doesn't know whether to re-enclose the corral with wood, wire or 
     put a metal fence. If you are going to fence with wood you should put 4 rows of boards, with rod 8 rows and 
     with wire only 5 rows, he wants to know what is the least expensive for fencing if you know that the barbed 
-    wire is worth P per meter, the boards at Q per meter and the rods S per meter. Given the size of the pen and 
+    wire is worth W per meter, the boards at B per meter and the rods R per meter. Given the size of the pen and 
     the prices of the elements, what enclosure is the most economical?
 '''
 

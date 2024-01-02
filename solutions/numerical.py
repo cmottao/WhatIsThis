@@ -12,7 +12,7 @@ def gcd(a, b):
 
 
 '''
-    5. Function power of an integer raised to an integer. 
+    5. Determine the power of an integer raised to an integer.
 '''
 
 def power(b, e):
@@ -23,7 +23,7 @@ def power(b, e):
 
 
 '''
-    6. A function that determines whether one number is divisible by another.
+    6. Determine if a number is divisible by another number.
 '''
 
 def divisible(a, b):
@@ -42,7 +42,7 @@ def prime(n):
 
 
 '''
-    8. Given two natural, determine if they are relative primes.
+    8. Determine if two integers are relative primes.
 '''
 
 def relativePrimes(a, b):
